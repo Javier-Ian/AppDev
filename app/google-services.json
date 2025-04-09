@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "304144259438",
+    "project_id": "flextrack-adeb1",
+    "storage_bucket": "flextrack-adeb1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304144259438:android:bc2603018746b5acd7c97f",
+        "android_client_info": {
+          "package_name": "com.example.flextrack_ianation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT8ngb0CsmYEDHSa1UV3jMfv9atxwZpAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

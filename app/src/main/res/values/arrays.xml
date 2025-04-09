@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fitness Goals -->
+    <string-array name="fitness_goals">
+        <item>Lose Weight</item>
+        <item>Build Muscle</item>
+        <item>Stay Fit</item>
+        <item>Improve Endurance</item>
+        <item>Tone Body</item>
+    </string-array>
+
+    <!-- Fitness Levels -->
+    <string-array name="fitness_levels">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
+
+    <!-- Workout Intensity -->
+    <string-array name="intensity_levels">
+        <item>Low</item>
+        <item>Moderate</item>
+        <item>High</item>
+    </string-array>
+
+    <!-- Workout Environments -->
+    <string-array name="workout_environments">
+        <item>Home</item>
+        <item>Gym</item>
+        <item>Outdoor</item>
+    </string-array>
+
+    <!-- Focus Areas -->
+    <string-array name="focus_areas">
+        <item>Upper Body</item>
+        <item>Lower Body</item>
+        <item>Core</item>
+        <item>Cardio</item>
+        <item>Full Body</item>
+    </string-array>
+</resources> 
