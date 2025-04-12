@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView userEmailTextView, nameTextView, ageTextView, genderTextView, 
                      heightTextView, weightTextView, bmiTextView, bmiCategoryTextView,
                      fitnessGoalTextView, fitnessLevelTextView;
-    private Button editProfileButton, signOutButton;
+    private Button editProfileButton, signOutButton, viewWorkoutPlanButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         
         editProfileButton = findViewById(R.id.edit_profile_button);
         signOutButton = findViewById(R.id.sign_out_button);
+        viewWorkoutPlanButton = findViewById(R.id.view_workout_plan_button);
     }
     
     private void setupButtons() {
@@ -89,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 mAuth.signOut();
                 startActivity(new Intent(MainActivity.this, SignInActivity.class));
                 finish();
+            }
+        });
+        
+        viewWorkoutPlanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, WorkoutPlanActivity.class));
             }
         });
     }

@@ -21,6 +21,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * IMPORTANT: For this workaround to work, you MUST:
@@ -71,7 +75,8 @@ public class SignInActivity extends AppCompatActivity {
         // Check if user is already signed in
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
-            updateUI(currentUser);
+            // Check if user has completed health profile
+            checkHealthProfile(currentUser);
         }
     }
 
@@ -145,11 +150,36 @@ public class SignInActivity extends AppCompatActivity {
                 });
     }
 
+    private void checkHealthProfile(FirebaseUser user) {
+        FirebaseDatabase.getInstance().getReference()
+                .child("users")
+                .child(user.getUid())
+                .child("healthProfile")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            // User has completed health profile, go to WorkoutPlanActivity
+                            startActivity(new Intent(SignInActivity.this, WorkoutPlanActivity.class));
+                        } else {
+                            // User needs to complete health profile
+                            startActivity(new Intent(SignInActivity.this, HealthQuestionnaireActivity.class));
+                        }
+                        finish();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        Log.e(TAG, "Error checking health profile: " + databaseError.getMessage());
+                        Toast.makeText(SignInActivity.this, "Error checking profile status", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
     private void updateUI(FirebaseUser user) {
         if (user != null) {
-            // Navigate to health profile activity
-            startActivity(new Intent(SignInActivity.this, HealthProfileActivity.class));
-            finish();
+            // Check if user has completed health profile
+            checkHealthProfile(user);
         }
     }
 } 

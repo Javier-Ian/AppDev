@@ -2,11 +2,13 @@
 <resources>
     <!-- Fitness Goals -->
     <string-array name="fitness_goals">
-        <item>Lose Weight</item>
-        <item>Build Muscle</item>
-        <item>Stay Fit</item>
-        <item>Improve Endurance</item>
-        <item>Tone Body</item>
+        <item>Weight Loss</item>
+        <item>Muscle Gain</item>
+        <item>Improve Cardiovascular Health</item>
+        <item>Maintain Current Fitness</item>
+        <item>Increase Flexibility</item>
+        <item>Prepare for Athletic Event</item>
+        <item>General Health</item>
     </string-array>
 
     <!-- Fitness Levels -->
@@ -14,6 +16,7 @@
         <item>Beginner</item>
         <item>Intermediate</item>
         <item>Advanced</item>
+        <item>Athletic</item>
     </string-array>
 
     <!-- Workout Intensity -->
@@ -21,21 +24,42 @@
         <item>Low</item>
         <item>Moderate</item>
         <item>High</item>
+        <item>Variable</item>
+    </string-array>
+
+    <!-- Alternative name for intensity_levels -->
+    <string-array name="workout_intensities">
+        <item>Low</item>
+        <item>Moderate</item>
+        <item>High</item>
+        <item>Variable</item>
     </string-array>
 
     <!-- Workout Environments -->
     <string-array name="workout_environments">
         <item>Home</item>
         <item>Gym</item>
-        <item>Outdoor</item>
+        <item>Outdoors</item>
+        <item>Combination</item>
     </string-array>
 
     <!-- Focus Areas -->
     <string-array name="focus_areas">
+        <item>Full Body</item>
         <item>Upper Body</item>
         <item>Lower Body</item>
         <item>Core</item>
-        <item>Cardio</item>
-        <item>Full Body</item>
+        <item>Cardiovascular</item>
+    </string-array>
+    
+    <!-- Days Per Week -->
+    <string-array name="days_per_week">
+        <item>1 day</item>
+        <item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>5 days</item>
+        <item>6 days</item>
+        <item>7 days</item>
     </string-array>
 </resources> 

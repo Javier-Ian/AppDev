@@ -52,6 +52,9 @@ dependencies {
     // Add Firebase Realtime Database
     implementation("com.google.firebase:firebase-database")
     
+    // Add Firebase Firestore
+    implementation("com.google.firebase:firebase-firestore")
+    
     // Google Sign In (specify the exact version to avoid conflicts)
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     
