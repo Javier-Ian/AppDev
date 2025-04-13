@@ -41,6 +41,10 @@
             android:exported="false" />
         
         <activity
+            android:name=".WorkoutProgressActivity"
+            android:exported="false" />
+        
+        <activity
             android:name=".HealthQuestionnaireActivity"
             android:exported="false" />
 
