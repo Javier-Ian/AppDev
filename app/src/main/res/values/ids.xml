@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bottom Navigation Menu IDs -->
+    <item name="navigation_steps" type="id" />
+    <item name="navigation_workout" type="id" />
+    <item name="navigation_progress" type="id" />
+</resources> 

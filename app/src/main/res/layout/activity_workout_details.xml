@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/workout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/workout_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/primary"
+                app:layout_constraintTop_toBottomOf="@id/workout_title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/workout_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/workout_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/duration_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration:"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/workout_description"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/workout_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/workout_description"
+                app:layout_constraintStart_toEndOf="@id/duration_label"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/difficulty_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difficulty:"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/duration_label"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/workout_difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/duration_label"
+                app:layout_constraintStart_toEndOf="@id/difficulty_label"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/muscle_groups_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Target Muscle Groups:"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/difficulty_label"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/workout_muscle_groups"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/muscle_groups_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                app:layout_constraintTop_toBottomOf="@id/workout_muscle_groups"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout
+                android:id="@+id/exercises_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="80dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/start_workout_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_media_play"
+        app:backgroundTint="@color/accent"
+        app:tint="@color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout> 
