@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -46,6 +50,7 @@ public class SignInActivity extends AppCompatActivity {
     
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
+    private TextView appLogoText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,12 +66,34 @@ public class SignInActivity extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         mAuth = FirebaseAuth.getInstance();
 
-        findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
+        appLogoText = findViewById(R.id.app_logo_text);
+        Button signInButton = findViewById(R.id.sign_in_button);
+        
+        // Animate FlexTrack logo
+        animateLogoText();
+
+        signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signIn();
             }
         });
+    }
+    
+    private void animateLogoText() {
+        // Create a TranslateAnimation to move the text upward
+        TranslateAnimation animation = new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF, 0f,
+                Animation.RELATIVE_TO_SELF, 0f,
+                Animation.RELATIVE_TO_SELF, 0f,
+                Animation.RELATIVE_TO_SELF, -0.1f);
+        
+        animation.setDuration(1000);  // Animation duration in milliseconds
+        animation.setFillAfter(true); // Keep the end position
+        animation.setStartOffset(500); // Delay before starting animation
+        
+        // Start the animation
+        appLogoText.startAnimation(animation);
     }
     
     @Override

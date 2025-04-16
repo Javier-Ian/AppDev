@@ -1,0 +1,3777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.8.0" type="baseline" client="gradle" dependencies="false" name="AGP (8.8.0)" variant="all" version="8.8.0">
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                .setContentText(&quot;Session: &quot; + currentSteps + &quot; steps • &quot; + String.format(&quot;%.1f&quot;, calories) + &quot; kcal&quot;)"
+        errorLine2="                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/services/StepCounterService.java"
+            line="400"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                &quot;Progressive resistance training focused on &quot; + focusArea.toLowerCase(),"
+        errorLine2="                                                                          ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/services/WorkoutGeneratorNormalWeight.java"
+            line="37"
+            column="75"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                &quot;A workout designed to improve cardiovascular endurance with focus on &quot; + focusArea.toLowerCase(),"
+        errorLine2="                                                                                                    ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/services/WorkoutGeneratorNormalWeight.java"
+            line="109"
+            column="101"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                &quot;Combination of strength, cardio, and flexibility with focus on &quot; + focusArea.toLowerCase(),"
+        errorLine2="                                                                                              ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/services/WorkoutGeneratorNormalWeight.java"
+            line="182"
+            column="95"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                &quot;A simple workout focusing on &quot; + focusArea.toLowerCase(),"
+        errorLine2="                                                            ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="298"
+            column="61"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        String details = String.format(&quot;Sets: %d | Reps: %d | Rest: %ds&quot;, "
+        errorLine2="                         ^">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutProgressActivity.java"
+            line="160"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        progressText.setText(String.format(&quot;Exercise %d of %d&quot;, currentExerciseIndex + 1, totalExercises));"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutProgressActivity.java"
+            line="183"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                restTimerText.setText(String.format(&quot;Rest: %d seconds remaining&quot;, secondsRemaining));"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutProgressActivity.java"
+            line="247"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                if (workoutType.toLowerCase().contains(&quot;strength&quot;) || workoutType.toLowerCase().contains(&quot;muscle&quot;)) {"
+        errorLine2="                                ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="128"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                if (workoutType.toLowerCase().contains(&quot;strength&quot;) || workoutType.toLowerCase().contains(&quot;muscle&quot;)) {"
+        errorLine2="                                                                                  ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="128"
+            column="83"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                } else if (workoutType.toLowerCase().contains(&quot;cardio&quot;) || workoutType.toLowerCase().contains(&quot;endurance&quot;)) {"
+        errorLine2="                                       ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="130"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                } else if (workoutType.toLowerCase().contains(&quot;cardio&quot;) || workoutType.toLowerCase().contains(&quot;endurance&quot;)) {"
+        errorLine2="                                                                                       ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="130"
+            column="88"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                } else if (workoutType.toLowerCase().contains(&quot;yoga&quot;) || workoutType.toLowerCase().contains(&quot;flexibility&quot;)) {"
+        errorLine2="                                       ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="132"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                } else if (workoutType.toLowerCase().contains(&quot;yoga&quot;) || workoutType.toLowerCase().contains(&quot;flexibility&quot;)) {"
+        errorLine2="                                                                                     ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="132"
+            column="86"/>
+    </issue>
+
+    <issue
+        id="ForegroundServiceType"
+        message="To call `Service.startForeground()`, the `&lt;service>` element of manifest file must have the `foregroundServiceType` attribute specified"
+        errorLine1="        startForeground(NOTIFICATION_ID, buildNotification());"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/services/StepCounterService.java"
+            line="126"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnspecifiedRegisterReceiverFlag"
+        message="`stepUpdateReceiver` is missing `RECEIVER_EXPORTED` or `RECEIVER_NOT_EXPORTED` flag for unprotected broadcasts registered for STEP_COUNTER_UPDATE"
+        errorLine1="        registerReceiver(stepUpdateReceiver, new IntentFilter(&quot;STEP_COUNTER_UPDATE&quot;));"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="135"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.8.0 is available: 8.9.1. (There is also a newer version of 8.8.𝑥 available, if upgrading to 8.9.1 is difficult: 8.8.2)"
+        errorLine1="agp = &quot;8.8.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/FLEXTRACK_IANATION/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.8.0 is available: 8.9.1. (There is also a newer version of 8.8.𝑥 available, if upgrading to 8.9.1 is difficult: 8.8.2)"
+        errorLine1="agp = &quot;8.8.0&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/AndroidStudioProjects/FLEXTRACK_IANATION/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-auth than 20.7.0 is available: 21.3.0"
+        errorLine1="    implementation(&quot;com.google.android.gms:play-services-auth:20.7.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="64"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.12.0"
+        errorLine1="    implementation(&quot;com.google.android.material:material:1.11.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="67"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`"
+        errorLine1="                    android:tint=&quot;@color/primary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="183"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="                card.setForeground(getResources().getDrawable(android.R.drawable.list_selector_background));"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="597"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`"
+        errorLine1="                            android:drawableStart=&quot;@android:drawable/ic_menu_recent_history&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="185"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`"
+        errorLine1="                            android:drawableStart=&quot;@android:drawable/ic_menu_directions&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="208"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`"
+        errorLine1="                            android:drawableStart=&quot;@android:drawable/ic_menu_info_details&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="231"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="WakelockTimeout"
+        message="Provide a timeout when requesting a wakelock with `PowerManager.Wakelock.acquire(long timeout)`. This will ensure the OS will cleanup any wakelocks that last longer than you intend, and will save your user&apos;s battery."
+        errorLine1="            wakeLock.acquire();"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/services/StepCounterService.java"
+            line="129"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="                workoutAdapter.notifyDataSetChanged();"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/fragments/DailyProgressFragment.java"
+            line="229"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="                    adapter.notifyDataSetChanged();"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutSessionActivity.java"
+            line="110"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="154"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1160 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M13,2c-1.1,0 -2,0.9 -2,2s0.9,2 2,2 2,-0.9 2,-2 -0.9,-2 -2,-2zM13,14h-3c-0.55,0 -1,0.45 -1,1v5c0,0.55 0.45,1 1,1h3c0.55,0 1,-0.45 1,-1v-5c0,-0.55 -0.45,-1 -1,-1zM19.39,12.58l-1,-1.93c-0.6,-0.28 -1.1,-0.7 -1.4,-1.23l-1.3,-2.12c-0.81,-1.33 -2.18,-2.27 -3.69,-2.3C13.39,5.01 15,6.2 15,8c0,1.05 -0.8,1.86 -1.81,1.96v0.37c0,0.18 -0.35,0.29 -0.6,0.29 -0.27,0 -0.56,-0.12 -0.56,-0.31v-0.37c-1.63,-0.24 -2.5,-1.88 -1.85,-3.29L8.95,8.15c-0.29,0.47 -0.39,0.92 -0.25,1.3 0.58,1.56 2.03,1.79 2.3,3.04 0,0 1.14,5.64 1.14,7.46 0,0.5 -0.11,0.8 -0.25,1.05h2.33c0.33,-0.31 0.58,-0.75 0.6,-1.31 0.06,-1.27 -0.38,-2.94 -0.38,-4.07 0,-0.79 2.44,-2.44 3.21,-2.68 0.17,-0.05 0.28,-0.05 0.33,0.02 0.2,0.22 0.45,0.68 0.45,1.17 0,0.82 -0.98,1.88 -1.41,2.31 -0.19,0.2 -0.19,0.46 0.02,0.74l1.57,1.57c0.25,0.25 0.15,0.6 -0.2,0.6 -0.78,0 -1.32,-0.01 -1.5,-0.01 -0.67,0 -1.28,-0.26 -1.75,-0.7 -0.03,0.82 0.1,1.68 0.3,2.46 0.02,0.58 0.7,1.04 1.27,1.04h4.12c0.38,0 0.75,-0.22 0.76,-0.64 0.03,-1.17 -0.81,-2.56 -1.35,-3.59 -0.08,-0.15 0,-0.36 0.19,-0.38 0.39,-0.07 0.93,-0.24 1.36,-0.7L21,13.85c0.32,-0.31 0.07,-0.87 -0.38,-0.87 -0.38,0 -0.76,-0.15 -1.05,-0.39 -0.1,-0.08 -0.18,-0.01 -0.18,0.1z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_yoga.xml"
+            line="9"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="                &lt;LinearLayout"
+        errorLine2="                 ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="180"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="                &lt;LinearLayout"
+        errorLine2="                 ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="243"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="                &lt;LinearLayout"
+        errorLine2="                 ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="203"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/backgroundColor` with a theme that also paints a background (inferred theme is `@style/Theme.FlexTrackIanation`)"
+        errorLine1="    android:background=&quot;@color/backgroundColor&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_session.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.circle_accent` appears to be unused"
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/circle_accent.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.primary_light` appears to be unused"
+        errorLine1="    &lt;color name=&quot;primary_light&quot;>#BBDEFB&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.icons` appears to be unused"
+        errorLine1="    &lt;color name=&quot;icons&quot;>#FFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_monthly_progress` appears to be unused"
+        errorLine1="&lt;androidx.core.widget.NestedScrollView xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_weekly_progress` appears to be unused"
+        errorLine1="&lt;androidx.core.widget.NestedScrollView xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="            &lt;Button"
+        errorLine2="             ~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="198"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="            &lt;Button"
+        errorLine2="             ~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="206"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="                &lt;Button"
+        errorLine2="                 ~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="258"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        errorLine1="                &lt;Button"
+        errorLine2="                 ~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="268"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="33"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="49"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="94"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="110"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="168"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="184"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="228"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="55"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="94"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="172"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="195"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="342"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(platform(&quot;com.google.firebase:firebase-bom:33.12.0&quot;))"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="49"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.google.firebase:firebase-analytics&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="52"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.google.firebase:firebase-auth&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="55"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.google.firebase:firebase-database&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="58"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.google.firebase:firebase-firestore&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="61"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.google.android.gms:play-services-auth:20.7.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="64"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead (com.google.android.material:material is already available as `material`, but using version 1.12.0 instead)"
+        errorLine1="    implementation(&quot;com.google.android.material:material:1.11.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="67"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;androidx.swiperefreshlayout:swiperefreshlayout:1.1.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="70"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.github.PhilJay:MPAndroidChart:v3.1.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="73"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view ``CardView`` has `setOnTouchListener` called on it but does not override `performClick`"
+        errorLine1="                card.setOnTouchListener((v, event) -> {"
+        errorLine2="                ^">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="600"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="`onTouch` lambda should call `View#performClick` when a click is detected"
+        errorLine1="                card.setOnTouchListener((v, event) -> {"
+        errorLine2="                                        ^">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="600"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;com.google.android.material.floatingactionbutton.FloatingActionButton"
+        errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_details.xml"
+            line="126"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="179"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_session.xml"
+            line="37"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_workout_session.xml"
+            line="17"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            dateDisplay.setText(&quot;Today, &quot; + dateFormat.format(date));"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/fragments/DailyProgressFragment.java"
+            line="154"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            dateDisplay.setText(&quot;Today, &quot; + dateFormat.format(date));"
+        errorLine2="                                ~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/fragments/DailyProgressFragment.java"
+            line="154"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        pageIndicator.setText(&quot;Page &quot; + (currentPage + 1) + &quot; of &quot; + questionLayouts.length);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/HealthQuestionnaireActivity.java"
+            line="175"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        pageIndicator.setText(&quot;Page &quot; + (currentPage + 1) + &quot; of &quot; + questionLayouts.length);"
+        errorLine2="                                         ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/HealthQuestionnaireActivity.java"
+            line="175"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        pageIndicator.setText(&quot;Page &quot; + (currentPage + 1) + &quot; of &quot; + questionLayouts.length);"
+        errorLine2="                              ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/HealthQuestionnaireActivity.java"
+            line="175"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        pageIndicator.setText(&quot;Page &quot; + (currentPage + 1) + &quot; of &quot; + questionLayouts.length);"
+        errorLine2="                                                            ~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/HealthQuestionnaireActivity.java"
+            line="175"
+            column="61"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            userEmailTextView.setText(&quot;Email: &quot; + currentUser.getEmail());"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="53"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            userEmailTextView.setText(&quot;Email: &quot; + currentUser.getEmail());"
+        errorLine2="                                      ~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="53"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            nameTextView.setText(&quot;Name: &quot; + profileData.get(&quot;fullName&quot;));"
+        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="121"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            nameTextView.setText(&quot;Name: &quot; + profileData.get(&quot;fullName&quot;));"
+        errorLine2="                                                 ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="121"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            ageTextView.setText(&quot;Age: &quot; + profileData.get(&quot;age&quot;));"
+        errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="122"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            ageTextView.setText(&quot;Age: &quot; + profileData.get(&quot;age&quot;));"
+        errorLine2="                                                ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="122"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            genderTextView.setText(&quot;Gender: &quot; + profileData.get(&quot;gender&quot;));"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="123"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            genderTextView.setText(&quot;Gender: &quot; + profileData.get(&quot;gender&quot;));"
+        errorLine2="                                                   ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="123"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            heightTextView.setText(&quot;Height: &quot; + profileData.get(&quot;height&quot;) + &quot; cm&quot;);"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="124"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            heightTextView.setText(&quot;Height: &quot; + profileData.get(&quot;height&quot;) + &quot; cm&quot;);"
+        errorLine2="                                                   ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="124"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            heightTextView.setText(&quot;Height: &quot; + profileData.get(&quot;height&quot;) + &quot; cm&quot;);"
+        errorLine2="                                                                                            ~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="124"
+            column="93"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            weightTextView.setText(&quot;Weight: &quot; + profileData.get(&quot;weight&quot;) + &quot; kg&quot;);"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="125"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            weightTextView.setText(&quot;Weight: &quot; + profileData.get(&quot;weight&quot;) + &quot; kg&quot;);"
+        errorLine2="                                                   ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="125"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            weightTextView.setText(&quot;Weight: &quot; + profileData.get(&quot;weight&quot;) + &quot; kg&quot;);"
+        errorLine2="                                                                                            ~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="125"
+            column="93"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            bmiTextView.setText(&quot;BMI: &quot; + df.format(bmi));"
+        errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="130"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            bmiTextView.setText(&quot;BMI: &quot; + df.format(bmi));"
+        errorLine2="                                                ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="130"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            bmiCategoryTextView.setText(&quot;Category: &quot; + getBmiCategory(bmi));"
+        errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="131"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            bmiCategoryTextView.setText(&quot;Category: &quot; + getBmiCategory(bmi));"
+        errorLine2="                                                        ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="131"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            fitnessGoalTextView.setText(&quot;Goal: &quot; + profileData.get(&quot;fitnessGoal&quot;));"
+        errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="134"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            fitnessGoalTextView.setText(&quot;Goal: &quot; + profileData.get(&quot;fitnessGoal&quot;));"
+        errorLine2="                                                        ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="134"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            fitnessLevelTextView.setText(&quot;Level: &quot; + profileData.get(&quot;fitnessLevel&quot;));"
+        errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="135"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            fitnessLevelTextView.setText(&quot;Level: &quot; + profileData.get(&quot;fitnessLevel&quot;));"
+        errorLine2="                                                         ~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/MainActivity.java"
+            line="135"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        goalTextView.setText(&quot;Goal: 10,000 steps&quot;);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="166"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        stepsLabelTextView.setText(&quot;total steps (hardware)&quot;);"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="173"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    actionButton.setText(&quot;Stop&quot;);"
+        errorLine2="                                         ~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="183"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    actionButton.setText(&quot;Start&quot;);"
+        errorLine2="                                         ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="197"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            caloriesValueTextView.setText(&quot;0.0 kcal&quot;);"
+        errorLine2="                                                          ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="217"
+            column="59"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            distanceValueTextView.setText(&quot;0.00 m&quot;);"
+        errorLine2="                                                          ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="218"
+            column="59"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            timeValueTextView.setText(&quot;00:00:00&quot;);"
+        errorLine2="                                                      ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="219"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            actionButton.setText(&quot;Start&quot;);"
+        errorLine2="                                                 ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="225"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    caloriesValueTextView.setText(&quot;0.0 kcal&quot;);"
+        errorLine2="                                                  ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="237"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    distanceValueTextView.setText(&quot;0.00 m&quot;);"
+        errorLine2="                                                  ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="238"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    timeValueTextView.setText(&quot;00:00:00&quot;);"
+        errorLine2="                                              ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="239"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    actionButton.setText(&quot;Start&quot;);"
+        errorLine2="                                         ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="243"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        caloriesValueTextView.setText(caloriesFormat.format(calories) + &quot; kcal&quot;);"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="309"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        caloriesValueTextView.setText(caloriesFormat.format(calories) + &quot; kcal&quot;);"
+        errorLine2="                                                                        ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="309"
+            column="73"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            distanceValueTextView.setText(distanceFormat.format(distance) + &quot; m&quot;);"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="314"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            distanceValueTextView.setText(distanceFormat.format(distance / 1000) + &quot; km&quot;);"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="316"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            distanceValueTextView.setText(distanceFormat.format(distance / 1000) + &quot; km&quot;);"
+        errorLine2="                                                                                   ~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="316"
+            column="84"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            actionButton.setText(&quot;Stop&quot;);"
+        errorLine2="                                 ~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="332"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            actionButton.setText(&quot;Start&quot;);"
+        errorLine2="                                 ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="335"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        caloriesValueTextView.setText(&quot;0.0 kcal&quot;);"
+        errorLine2="                                      ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="345"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        distanceValueTextView.setText(&quot;0.00 m&quot;);"
+        errorLine2="                                      ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="346"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        timeValueTextView.setText(&quot;00:00:00&quot;);"
+        errorLine2="                                  ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="347"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        caloriesValueTextView.setText(caloriesFormat.format(calories) + &quot; kcal&quot;);"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="552"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        caloriesValueTextView.setText(caloriesFormat.format(calories) + &quot; kcal&quot;);"
+        errorLine2="                                                                        ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="552"
+            column="73"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            distanceValueTextView.setText(distanceFormat.format(distance) + &quot; m&quot;);"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="557"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            distanceValueTextView.setText(distanceFormat.format(distance / 1000) + &quot; km&quot;);"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="559"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            distanceValueTextView.setText(distanceFormat.format(distance / 1000) + &quot; km&quot;);"
+        errorLine2="                                                                                   ~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/StepsCounterActivity.java"
+            line="559"
+            column="84"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        workoutType.setText(workout.getWorkoutType() + &quot; • &quot; + workout.getFocusArea());"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="91"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        workoutDuration.setText(workout.getDurationMinutes() + &quot; minutes&quot;);"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="101"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        workoutDuration.setText(workout.getDurationMinutes() + &quot; minutes&quot;);"
+        errorLine2="                                                               ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="101"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            noExercisesText.setText(&quot;No exercises found for this workout.&quot;);"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="109"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        personalizationHeader.setText(&quot;These exercises are tailored for your &quot; + workout.getFocusArea() + "
+        errorLine2="                                      ^">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="117"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        personalizationHeader.setText(&quot;These exercises are tailored for your &quot; + workout.getFocusArea() + "
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="117"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                &quot; focus in a &quot; + workout.getWorkoutEnvironment() + &quot; environment.&quot;);"
+        errorLine2="                ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="118"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                &quot; focus in a &quot; + workout.getWorkoutEnvironment() + &quot; environment.&quot;);"
+        errorLine2="                                                                   ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="118"
+            column="68"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        exercisesHeader.setText(&quot;Exercises&quot;);"
+        errorLine2="                                ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="126"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            muscleGroup.setText(&quot;Target: &quot; + exercise.getMuscleGroup());"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="153"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            muscleGroup.setText(&quot;Target: &quot; + exercise.getMuscleGroup());"
+        errorLine2="                                ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="153"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                equipmentText.setText(&quot;Equipment: &quot; + exercise.getEquipmentNeeded());"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="176"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                equipmentText.setText(&quot;Equipment: &quot; + exercise.getEquipmentNeeded());"
+        errorLine2="                                      ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="176"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            difficultyText.setText(&quot;Difficulty: &quot; + exercise.getDifficultyLevel() + &quot; • Type: &quot; + exercise.getExerciseType());"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="183"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            difficultyText.setText(&quot;Difficulty: &quot; + exercise.getDifficultyLevel() + &quot; • Type: &quot; + exercise.getExerciseType());"
+        errorLine2="                                   ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="183"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            difficultyText.setText(&quot;Difficulty: &quot; + exercise.getDifficultyLevel() + &quot; • Type: &quot; + exercise.getExerciseType());"
+        errorLine2="                                                                                    ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="183"
+            column="85"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        progressionNote.setText(&quot;Note: This workout is part of your personalized progression plan. &quot; +"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="195"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        progressionNote.setText(&quot;Note: This workout is part of your personalized progression plan. &quot; +"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="195"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                &quot;As you improve, the exercises will adapt to your increasing fitness level.&quot;);"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="196"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        completedBanner.setText(&quot;WORKOUT COMPLETED!&quot;);"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutDetailsActivity.java"
+            line="411"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        weekTitleTextView.setText(&quot;Week &quot; + currentWeek + &quot; of &quot; + totalWeeks);"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="126"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        weekTitleTextView.setText(&quot;Week &quot; + currentWeek + &quot; of &quot; + totalWeeks);"
+        errorLine2="                                  ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="126"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        weekTitleTextView.setText(&quot;Week &quot; + currentWeek + &quot; of &quot; + totalWeeks);"
+        errorLine2="                                                          ~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="126"
+            column="59"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        weekTitleTextView.setText(&quot;Your Personalized Workout Plan (&quot; + plan.getWorkoutsPerWeek() + &quot; workouts/week)&quot;);"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="410"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        weekTitleTextView.setText(&quot;Your Personalized Workout Plan (&quot; + plan.getWorkoutsPerWeek() + &quot; workouts/week)&quot;);"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="410"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        weekTitleTextView.setText(&quot;Your Personalized Workout Plan (&quot; + plan.getWorkoutsPerWeek() + &quot; workouts/week)&quot;);"
+        errorLine2="                                                                                                   ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="410"
+            column="100"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            personalizationHeader.setText(&quot;These workouts are customized based on your health profile, fitness level, goals, and selected focus area.&quot;);"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="525"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                dayTitle.setText(&quot;Week &quot; + workoutWeek + &quot;, Day &quot; + workoutDay);"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="555"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                dayTitle.setText(&quot;Week &quot; + workoutWeek + &quot;, Day &quot; + workoutDay);"
+        errorLine2="                                 ~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="555"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                dayTitle.setText(&quot;Week &quot; + workoutWeek + &quot;, Day &quot; + workoutDay);"
+        errorLine2="                                                         ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="555"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                workoutType.setText(type + &quot; • &quot; + focus);"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="560"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                exerciseCount.setText(numExercises + &quot; exercises&quot;);"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="567"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                exerciseCount.setText(numExercises + &quot; exercises&quot;);"
+        errorLine2="                                                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="567"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                workoutDuration.setText(&quot;Duration: &quot; + workout.getDurationMinutes() + &quot; minutes&quot;);"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="570"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                workoutDuration.setText(&quot;Duration: &quot; + workout.getDurationMinutes() + &quot; minutes&quot;);"
+        errorLine2="                                        ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="570"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                workoutDuration.setText(&quot;Duration: &quot; + workout.getDurationMinutes() + &quot; minutes&quot;);"
+        errorLine2="                                                                                      ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="570"
+            column="87"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            noWorkoutsText.setText(&quot;No workouts found. Please try generating a new plan.&quot;);"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutPlanActivity.java"
+            line="620"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            equipmentText.setText(&quot;Equipment: &quot; + exercise.getEquipmentNeeded());"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutProgressActivity.java"
+            line="168"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            equipmentText.setText(&quot;Equipment: &quot; + exercise.getEquipmentNeeded());"
+        errorLine2="                                  ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/WorkoutProgressActivity.java"
+            line="168"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            tvProgressPercentage.setText(completionPercentage + &quot;% Complete&quot;);"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="116"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            tvProgressPercentage.setText(completionPercentage + &quot;% Complete&quot;);"
+        errorLine2="                                                                ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/flextrack_ianation/adapters/WorkoutSessionAdapter.java"
+            line="116"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Health Profile&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Health Profile&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Full Name*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Full Name*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter your full name&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter your full name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Age*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Age*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="45"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter your age&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter your age&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Gender*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Gender*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Male&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Male&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="76"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Female&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Female&quot;/>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="83"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Height (cm)*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Height (cm)*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="90"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter your height in cm&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter your height in cm&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="98"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weight (kg)*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Weight (kg)*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="106"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter your weight in kg&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter your weight in kg&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="114"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Fitness Goal*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Fitness Goal*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="122"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Fitness Level*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Fitness Level*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="136"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Intensity Preference*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Workout Intensity Preference*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="150"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Available Workout Time per Day (minutes)*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Available Workout Time per Day (minutes)*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="164"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter available time in minutes&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter available time in minutes&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="172"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Days Available to Exercise per Week (1-7)*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Days Available to Exercise per Week (1-7)*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="180"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter days per week (1-7)&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter days per week (1-7)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="188"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Preferred Workout Environment*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Preferred Workout Environment*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="196"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Preferred Focus Area*&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Preferred Focus Area*&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="210"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Medical Conditions (Optional)&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Medical Conditions (Optional)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="224"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter any medical conditions&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter any medical conditions&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="232"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Save Profile&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Save Profile&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_profile.xml"
+            line="242"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Health Questionnaire&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Health Questionnaire&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Page 1 of 9&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Page 1 of 9&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your full name?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your full name?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="49"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Full Name&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Full Name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your age?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your age?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="88"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Age&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Age&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="100"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your gender?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your gender?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="111"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Male&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Male&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="130"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Female&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Female&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="136"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Other&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Other&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="142"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your height?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your height?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="166"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Height (cm)&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Height (cm)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="178"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your weight?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your weight?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="189"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weight (kg)&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Weight (kg)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="201"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your primary fitness goal?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your primary fitness goal?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="228"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your current fitness level?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your current fitness level?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="264"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What workout intensity do you prefer?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What workout intensity do you prefer?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="300"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;How much time can you dedicate to working out each day?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;How much time can you dedicate to working out each day?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="336"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Time (minutes)&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Time (minutes)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="348"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;How many days per week can you exercise?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;How many days per week can you exercise?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="359"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;What is your preferred workout environment?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;What is your preferred workout environment?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="395"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Which body area would you like to focus on?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Which body area would you like to focus on?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="415"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Do you have any medical conditions we should be aware of?&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Do you have any medical conditions we should be aware of?&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="451"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Yes, I have medical conditions that might affect my workout&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Yes, I have medical conditions that might affect my workout&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="462"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Previous&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Previous&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="485"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Next&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Next&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="495"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Submit&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Submit&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_health_questionnaire.xml"
+            line="504"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;FLEXTRACK&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;FLEXTRACK&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Account Information&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Account Information&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="40"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Email: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Email: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="49"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Basic Information&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Basic Information&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="70"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Name: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Name: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="79"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Age: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Age: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="87"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Gender: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Gender: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="95"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Body Metrics&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Body Metrics&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="116"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Height: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Height: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="125"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weight: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Weight: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="133"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;BMI: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;BMI: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="141"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Category: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Category: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="149"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Fitness Details&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Fitness Details&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="170"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Goal: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Goal: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="179"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Level: &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Level: &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="187"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit Profile&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Edit Profile&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="203"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Sign Out&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Sign Out&quot;/>"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="211"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;View Workout Plan&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;View Workout Plan&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="218"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;View Workout History&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;View Workout History&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="225"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Your Progress&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Your Progress&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Daily&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Daily&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="37"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weekly&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Weekly&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="42"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Monthly&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Monthly&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="47"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Summary&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Summary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="76"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workouts Completed&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Workouts Completed&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="90"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;0&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="97"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Total Minutes&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Total Minutes&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="110"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;0&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="117"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Calories Burned&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Calories Burned&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="130"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;0&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_progress.xml"
+            line="137"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Welcome to FLEXTRACK&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Welcome to FLEXTRACK&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_in.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Total Steps&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Total Steps&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="26"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;0&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="38"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;total steps (hardware)&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;total steps (hardware)&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="50"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Goal: 10,000 steps&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Goal: 10,000 steps&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="76"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Current Session Progress&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Current Session Progress&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="100"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Session Steps:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Session Steps:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="114"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;0&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="121"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Session steps are counted when you click &apos;Start&apos;, stopped when you click &apos;Stop&apos;, and will reset when you click &apos;Reset&apos;. Time, distance, and calories are based only on the current session.&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Session steps are counted when you click &apos;Start&apos;, stopped when you click &apos;Stop&apos;, and will reset when you click &apos;Reset&apos;. Time, distance, and calories are based only on the current session.&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="146"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Current Session Stats&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Current Session Stats&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="171"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Time:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Time:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="187"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;00:00:00&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;00:00:00&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="195"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Distance:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Distance:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="210"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0.00 m&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;0.00 m&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="218"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Calories:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Calories:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="233"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;0.0 kcal&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;0.0 kcal&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="241"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Start&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Start&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="265"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Reset&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Reset&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_steps_counter.xml"
+            line="275"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Duration:&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Duration:&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_details.xml"
+            line="51"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Difficulty:&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Difficulty:&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_details.xml"
+            line="70"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Target Muscle Groups:&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Target Muscle Groups:&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_details.xml"
+            line="89"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Your Workout Plan&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Your Workout Plan&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_plan.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Week 1 of 4&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Week 1 of 4&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_plan.xml"
+            line="32"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Previous&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Previous&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_plan.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Next&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Next&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_plan.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Generate New Plan&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Generate New Plan&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_plan.xml"
+            line="86"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Name&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Workout Name&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="25"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Exercise 1 of 5&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Exercise 1 of 5&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="42"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Exercise Name&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Exercise Name&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="80"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Exercise description goes here.&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Exercise description goes here.&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="89"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Sets: 3 | Reps: 12 | Rest: 60s&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Sets: 3 | Reps: 12 | Rest: 60s&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="97"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Equipment: Dumbbells&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Equipment: Dumbbells&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="105"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Complete Exercise&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Complete Exercise&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="116"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Rest Period&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Rest Period&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="142"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Rest: 60 seconds remaining&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Rest: 60 seconds remaining&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="152"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Skip Rest&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Skip Rest&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="161"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Completed!&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Workout Completed!&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="189"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Congratulations! You&apos;ve completed all exercises in this workout.&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Congratulations! You&apos;ve completed all exercises in this workout.&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="198"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Finish Workout&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Finish Workout&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_progress.xml"
+            line="207"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No workout sessions yet&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;No workout sessions yet&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_session.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Complete your first workout to see your progress&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Complete your first workout to see your progress&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_session.xml"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Start a Workout&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Start a Workout&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_session.xml"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Add new workout session&quot;, should use `@string` resource"
+        errorLine1="        android:contentDescription=&quot;Add new workout session&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_workout_session.xml"
+            line="97"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Steps Counter&quot;, should use `@string` resource"
+        errorLine1="        android:title=&quot;Steps Counter&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/menu/bottom_nav_menu.xml"
+            line="5"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Plan&quot;, should use `@string` resource"
+        errorLine1="        android:title=&quot;Workout Plan&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/menu/bottom_nav_menu.xml"
+            line="10"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Progress&quot;, should use `@string` resource"
+        errorLine1="        android:title=&quot;Progress&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/menu/bottom_nav_menu.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Get Ready!&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Get Ready!&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_countdown.xml"
+            line="13"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;3&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;3&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_countdown.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Your workout starts in...&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Your workout starts in...&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_countdown.xml"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Today&apos;s Progress&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Today&apos;s Progress&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Previous Day&quot;, should use `@string` resource"
+        errorLine1="                android:contentDescription=&quot;Previous Day&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="40"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Next Day&quot;, should use `@string` resource"
+        errorLine1="                android:contentDescription=&quot;Next Day&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="58"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Step Count&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Step Count&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="80"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Goal: 10,000 steps&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Goal: 10,000 steps&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="108"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Today&apos;s Workouts&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Today&apos;s Workouts&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="132"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No workouts completed today&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;No workouts completed today&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="151"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Daily Summary&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Daily Summary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="176"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Calories&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Calories&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="204"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Active Minutes&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Active Minutes&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="225"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workouts&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Workouts&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_daily_progress.xml"
+            line="246"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Monthly Progress&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Monthly Progress&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Previous Month&quot;, should use `@string` resource"
+        errorLine1="                android:contentDescription=&quot;Previous Month&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="39"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Next Month&quot;, should use `@string` resource"
+        errorLine1="                android:contentDescription=&quot;Next Month&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="57"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Step Count Trend&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Step Count Trend&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="79"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Monthly Total:&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Monthly Total:&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="99"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Minutes Trend&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Workout Minutes Trend&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="139"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Monthly Total:&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Monthly Total:&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="159"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Types&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Workout Types&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="199"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Monthly Summary&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Monthly Summary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="239"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Calories&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Calories&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="267"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Active Days&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Active Days&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="288"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workouts&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Workouts&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="309"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Progress From Last Month&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Progress From Last Month&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="318"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Step Count&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Step Count&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="331"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Minutes&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Workout Minutes&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="352"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Calories Burned&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Calories Burned&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_monthly_progress.xml"
+            line="373"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weekly Progress&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Weekly Progress&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Previous Week&quot;, should use `@string` resource"
+        errorLine1="                android:contentDescription=&quot;Previous Week&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="39"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Next Week&quot;, should use `@string` resource"
+        errorLine1="                android:contentDescription=&quot;Next Week&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="57"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Step Count&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Step Count&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="79"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weekly Total:&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Weekly Total:&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="99"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Minutes&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Workout Minutes&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="139"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weekly Total:&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Weekly Total:&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="159"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weekly Summary&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Weekly Summary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="199"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Calories&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Calories&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="227"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Active Days&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Active Days&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="248"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workouts&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Workouts&quot; />"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="269"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Weekly Goals Completion&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Weekly Goals Completion&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="278"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Step Goal&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Step Goal&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="291"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Goal&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Workout Goal&quot; />"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_weekly_progress.xml"
+            line="320"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Day 1&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Day 1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/workout_day_card.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Upper Body&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Upper Body&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/workout_day_card.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Workout Name&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Workout Name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/workout_day_card.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;5 exercises&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;5 exercises&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/workout_day_card.xml"
+            line="63"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Duration: 30 minutes&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Duration: 30 minutes&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/workout_day_card.xml"
+            line="70"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Tap to view details →&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Tap to view details →&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/workout_day_card.xml"
+            line="78"
+            column="13"/>
+    </issue>
+
+</issues>

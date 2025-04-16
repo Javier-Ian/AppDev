@@ -179,7 +179,7 @@
                 <ImageView
                     android:layout_width="96dp"
                     android:layout_height="96dp"
-                    android:src="@android:drawable/ic_dialog_info"
+                    android:src="@drawable/ic_workout_complete"
                     android:tint="@color/primary"
                     android:layout_marginBottom="16dp"/>
 
