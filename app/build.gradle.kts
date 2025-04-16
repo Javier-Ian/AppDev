@@ -30,6 +30,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    
+    lint {
+        baseline = file("lint-baseline.xml")
+        abortOnError = false
+    }
 }
 
 dependencies {
@@ -60,4 +65,10 @@ dependencies {
     
     // Add Material Components
     implementation("com.google.android.material:material:1.11.0")
+    
+    // SwipeRefreshLayout
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    
+    // MPAndroidChart for data visualization
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

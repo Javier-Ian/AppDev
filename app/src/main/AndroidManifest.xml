@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     
     <uses-feature android:name="android.hardware.sensor.stepcounter" android:required="false" />
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
@@ -60,6 +61,10 @@
             
         <activity
             android:name=".ProgressActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".WorkoutSessionActivity"
             android:exported="false" />
 
         <service

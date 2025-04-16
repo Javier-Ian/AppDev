@@ -10,4 +10,12 @@
     <color name="divider">#BDBDBD</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    
+    <!-- Additional colors needed for our layouts -->
+    <color name="primaryColor">#2196F3</color>
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="darkGray">#666666</color>
+    <color name="progress_green">#4CAF50</color>
+    <color name="progress_amber">#FFC107</color>
+    <color name="progress_red">#F44336</color>
 </resources>

@@ -6,15 +6,33 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
+import com.example.flextrack_ianation.adapters.ProgressPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 public class ProgressActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private ProgressPagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress);
+
+        // Set up ViewPager and TabLayout
+        viewPager = findViewById(R.id.view_pager);
+        tabLayout = findViewById(R.id.tabs);
+        
+        // Create and set up the adapter
+        pagerAdapter = new ProgressPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(pagerAdapter);
+        
+        // Connect the TabLayout with the ViewPager
+        tabLayout.setupWithViewPager(viewPager);
 
         // Set up bottom navigation
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);

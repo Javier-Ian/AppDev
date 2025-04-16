@@ -249,13 +249,68 @@ public class WorkoutDetailsActivity extends AppCompatActivity {
     }
     
     private void beginWorkout() {
-        // Mark the workout as started in Firebase
-        recordWorkoutStarted();
+        // Create a workout session
+        createWorkoutSession();
         
         // Start the workout progress activity to guide through exercises
         Intent intent = new Intent(this, WorkoutProgressActivity.class);
         intent.putExtra("workout", currentWorkout);
         startActivity(intent);
+    }
+    
+    private void createWorkoutSession() {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser == null || currentWorkout == null) {
+            return;
+        }
+        
+        String userId = currentUser.getUid();
+        String workoutId = currentWorkout.getWorkoutId();
+        if (workoutId == null) {
+            workoutId = "workout_" + System.currentTimeMillis(); // Generate an ID if not present
+            currentWorkout.setWorkoutId(workoutId);
+        }
+        
+        // Create a new workout session in Firestore
+        Map<String, Object> sessionData = new HashMap<>();
+        long startTimeMillis = System.currentTimeMillis();
+        
+        // Basic workout info
+        sessionData.put("workoutId", workoutId);
+        sessionData.put("workoutName", currentWorkout.getName());
+        sessionData.put("workoutType", currentWorkout.getWorkoutType());
+        sessionData.put("startTimeMillis", startTimeMillis);
+        sessionData.put("durationMinutes", currentWorkout.getDurationMinutes());
+        sessionData.put("caloriesBurned", currentWorkout.getCaloriesBurnEstimate());
+        sessionData.put("completed", false);
+        sessionData.put("userId", userId);
+        
+        // Add exercises to the session
+        Map<String, Boolean> exerciseProgress = new HashMap<>();
+        if (currentWorkout.getExercises() != null) {
+            for (Exercise exercise : currentWorkout.getExercises()) {
+                exerciseProgress.put(exercise.getName(), false);
+            }
+        }
+        sessionData.put("exerciseProgress", exerciseProgress);
+        
+        // Save to Firestore
+        FirebaseDatabase.getInstance().getReference()
+            .child("workoutSessions")
+            .child(workoutId)
+            .setValue(sessionData)
+            .addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    Toast.makeText(WorkoutDetailsActivity.this, 
+                        "Workout session started", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(WorkoutDetailsActivity.this, 
+                        "Failed to save workout session", Toast.LENGTH_SHORT).show();
+                }
+            });
+            
+        // Also record workout start in the legacy format for backward compatibility
+        recordWorkoutStarted();
     }
     
     private void showWorkoutCompletionDialog() {

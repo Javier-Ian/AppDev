@@ -184,6 +184,12 @@ public class WorkoutProgressActivity extends AppCompatActivity {
     }
     
     private void completeCurrentExercise() {
+        // Mark the current exercise as completed in WorkoutSession
+        if (currentExerciseIndex < totalExercises) {
+            Exercise currentExercise = exercises.get(currentExerciseIndex);
+            updateExerciseProgress(currentExercise.getName(), true);
+        }
+        
         // If this is the last exercise, complete the workout
         if (currentExerciseIndex >= totalExercises - 1) {
             completeWorkout();
@@ -201,6 +207,31 @@ public class WorkoutProgressActivity extends AppCompatActivity {
             currentExerciseIndex++;
             loadExercise(currentExerciseIndex);
         }
+    }
+    
+    private void updateExerciseProgress(String exerciseName, boolean completed) {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser == null || currentWorkout == null || exerciseName == null) {
+            return;
+        }
+        
+        String workoutId = currentWorkout.getWorkoutId();
+        if (workoutId == null) {
+            return;
+        }
+        
+        // Update the exercise progress in Firebase
+        mDatabase.child("workoutSessions")
+                .child(workoutId)
+                .child("exerciseProgress")
+                .child(exerciseName)
+                .setValue(completed)
+                .addOnCompleteListener(task -> {
+                    if (!task.isSuccessful()) {
+                        Toast.makeText(WorkoutProgressActivity.this, 
+                                "Failed to update exercise progress", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
     
     private void startRestTimer(int seconds) {
@@ -259,30 +290,53 @@ public class WorkoutProgressActivity extends AppCompatActivity {
                 workoutId = "workout_" + System.currentTimeMillis();
                 currentWorkout.setWorkoutId(workoutId);
             }
-            
-            // Update workout completion status
-            Map<String, Object> completionUpdate = new HashMap<>();
-            String currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
-            
-            completionUpdate.put("completed", true);
-            completionUpdate.put("completionTime", currentDateTime);
-            completionUpdate.put("caloriesBurned", currentWorkout.getCaloriesBurnEstimate());
-            
-            // Save to user's workout history
-            mDatabase.child("users").child(userId).child("workoutHistory").child(workoutId)
-                    .updateChildren(completionUpdate)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                showWorkoutCompletedDialog();
-                            } else {
-                                Toast.makeText(WorkoutProgressActivity.this, 
-                                        "Failed to record workout completion", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
+
+            // First update the workout session
+            updateWorkoutSession(workoutId, userId);
         }
+    }
+    
+    private void updateWorkoutSession(String workoutId, String userId) {
+        // Update workout session in Firebase
+        Map<String, Object> sessionUpdate = new HashMap<>();
+        sessionUpdate.put("completed", true);
+        sessionUpdate.put("caloriesBurned", currentWorkout.getCaloriesBurnEstimate());
+            
+        // Update in workoutSessions collection
+        mDatabase.child("workoutSessions")
+                .child(workoutId)
+                .updateChildren(sessionUpdate)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // Now update the legacy workout history
+                        updateLegacyWorkoutHistory(userId, workoutId);
+                    } else {
+                        Toast.makeText(WorkoutProgressActivity.this, 
+                                "Failed to update workout session", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+    
+    private void updateLegacyWorkoutHistory(String userId, String workoutId) {
+        // Update workout completion status in legacy format
+        Map<String, Object> completionUpdate = new HashMap<>();
+        String currentDateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
+        
+        completionUpdate.put("completed", true);
+        completionUpdate.put("completionTime", currentDateTime);
+        completionUpdate.put("caloriesBurned", currentWorkout.getCaloriesBurnEstimate());
+        
+        // Save to user's workout history
+        mDatabase.child("users").child(userId).child("workoutHistory").child(workoutId)
+                .updateChildren(completionUpdate)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        showWorkoutCompletedDialog();
+                    } else {
+                        Toast.makeText(WorkoutProgressActivity.this, 
+                                "Failed to record workout completion in history", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
     
     private void showWorkoutCompletedDialog() {
