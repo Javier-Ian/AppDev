@@ -6,10 +6,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +18,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -31,13 +33,18 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
 
     private ConstraintLayout[] questionLayouts;
     private int currentPage = 0;
-    private TextView pageIndicator;
+    private int totalPages = 9;
+    
+    // UI components
+    private CircularProgressIndicator progressIndicator;
+    private TextView progressCountText;
     private Button nextButton, prevButton, submitButton;
     
     // Form fields
-    private EditText nameEditText, ageEditText, heightEditText, weightEditText, workoutTimeEditText;
+    private TextInputEditText nameEditText, ageEditText, heightEditText, weightEditText, workoutTimeEditText;
     private RadioGroup genderRadioGroup;
-    private Spinner fitnessGoalsSpinner, fitnessLevelSpinner, intensitySpinner, environmentSpinner, focusAreaSpinner, daysPerWeekSpinner;
+    private MaterialAutoCompleteTextView fitnessGoalsSpinner, fitnessLevelSpinner, intensitySpinner, 
+                                        environmentSpinner, focusAreaSpinner, daysPerWeekSpinner;
     private CheckBox medicalConditionsCheckbox;
     
     private FirebaseAuth mAuth;
@@ -46,6 +53,12 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Hide action bar to remove the package name from the top
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        
         setContentView(R.layout.activity_health_questionnaire);
 
         // Initialize Firebase
@@ -57,8 +70,12 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
         setupSpinners();
         setupNavigation();
         
-        // Show the first page
+        // Set up back button
+        setupBackButton();
+        
+        // Show the first page and update progress indicator
         updatePageVisibility();
+        updateProgressIndicator();
     }
     
     private void initializeUIComponents() {
@@ -78,7 +95,13 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
         nextButton = findViewById(R.id.nextButton);
         prevButton = findViewById(R.id.prevButton);
         submitButton = findViewById(R.id.submitButton);
-        pageIndicator = findViewById(R.id.pageIndicator);
+        
+        // Progress indicator
+        progressIndicator = findViewById(R.id.progressIndicator);
+        progressCountText = findViewById(R.id.progressCountText);
+        
+        // Configure progress indicator
+        progressIndicator.setMax(totalPages * 100);
         
         // Form fields
         nameEditText = findViewById(R.id.nameEditText);
@@ -100,37 +123,26 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
     }
     
     private void setupSpinners() {
-        // Setup adapters for all spinners
-        ArrayAdapter<CharSequence> goalsAdapter = ArrayAdapter.createFromResource(this,
-                R.array.fitness_goals, android.R.layout.simple_spinner_item);
-        goalsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        fitnessGoalsSpinner.setAdapter(goalsAdapter);
-        
-        ArrayAdapter<CharSequence> levelAdapter = ArrayAdapter.createFromResource(this,
-                R.array.fitness_levels, android.R.layout.simple_spinner_item);
-        levelAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        fitnessLevelSpinner.setAdapter(levelAdapter);
-        
-        ArrayAdapter<CharSequence> intensityAdapter = ArrayAdapter.createFromResource(this,
-                R.array.workout_intensities, android.R.layout.simple_spinner_item);
-        intensityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        intensitySpinner.setAdapter(intensityAdapter);
-        
-        ArrayAdapter<CharSequence> environmentAdapter = ArrayAdapter.createFromResource(this,
-                R.array.workout_environments, android.R.layout.simple_spinner_item);
-        environmentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        environmentSpinner.setAdapter(environmentAdapter);
-        
-        ArrayAdapter<CharSequence> focusAdapter = ArrayAdapter.createFromResource(this,
-                R.array.focus_areas, android.R.layout.simple_spinner_item);
-        focusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        focusAreaSpinner.setAdapter(focusAdapter);
-        
-        // Setup days per week spinner
-        ArrayAdapter<CharSequence> daysAdapter = ArrayAdapter.createFromResource(this,
-                R.array.days_per_week, android.R.layout.simple_spinner_item);
-        daysAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        daysPerWeekSpinner.setAdapter(daysAdapter);
+        // Setup adapters for all dropdown menus
+        setupDropdownAdapter(fitnessGoalsSpinner, R.array.fitness_goals);
+        setupDropdownAdapter(fitnessLevelSpinner, R.array.fitness_levels);
+        setupDropdownAdapter(intensitySpinner, R.array.workout_intensities);
+        setupDropdownAdapter(environmentSpinner, R.array.workout_environments);
+        setupDropdownAdapter(focusAreaSpinner, R.array.focus_areas);
+        setupDropdownAdapter(daysPerWeekSpinner, R.array.days_per_week);
+    }
+    
+    private void setupDropdownAdapter(MaterialAutoCompleteTextView dropdown, int arrayResourceId) {
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                arrayResourceId, android.R.layout.simple_dropdown_item_1line);
+        dropdown.setAdapter(adapter);
+    }
+    
+    private void updateProgressIndicator() {
+        // Update progress indicator (0-based index to 1-based for display)
+        int currentProgress = (currentPage + 1) * 100;
+        progressIndicator.setProgress(currentProgress);
+        progressCountText.setText((currentPage + 1) + "/" + totalPages);
     }
     
     private void setupNavigation() {
@@ -140,6 +152,7 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
                 if (validateCurrentPage()) {
                     currentPage++;
                     updatePageVisibility();
+                    updateProgressIndicator();
                 }
             }
         });
@@ -149,6 +162,7 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentPage--;
                 updatePageVisibility();
+                updateProgressIndicator();
             }
         });
         
@@ -171,8 +185,9 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
         // Show current layout
         questionLayouts[currentPage].setVisibility(View.VISIBLE);
         
-        // Update page indicator
-        pageIndicator.setText("Page " + (currentPage + 1) + " of " + questionLayouts.length);
+        // Find the back button and set its visibility
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setVisibility(currentPage == 0 ? View.INVISIBLE : View.VISIBLE);
         
         // Update button visibility
         prevButton.setVisibility(currentPage > 0 ? View.VISIBLE : View.INVISIBLE);
@@ -240,43 +255,63 @@ public class HealthQuestionnaireActivity extends AppCompatActivity {
         
         userData.put("height", Float.parseFloat(heightEditText.getText().toString().trim()));
         userData.put("weight", Float.parseFloat(weightEditText.getText().toString().trim()));
-        userData.put("fitnessGoal", fitnessGoalsSpinner.getSelectedItem().toString());
-        userData.put("fitnessLevel", fitnessLevelSpinner.getSelectedItem().toString());
-        userData.put("workoutIntensity", intensitySpinner.getSelectedItem().toString());
+        
+        // Calculate BMI: weight (kg) / (height (m) * height (m))
+        float heightInMeters = Float.parseFloat(heightEditText.getText().toString().trim()) / 100;
+        float weightInKg = Float.parseFloat(weightEditText.getText().toString().trim());
+        float bmi = weightInKg / (heightInMeters * heightInMeters);
+        userData.put("bmi", bmi);
+        
+        userData.put("fitnessGoal", fitnessGoalsSpinner.getText().toString());
+        userData.put("fitnessLevel", fitnessLevelSpinner.getText().toString());
+        userData.put("workoutIntensity", intensitySpinner.getText().toString());
         userData.put("workoutTimePerDay", Integer.parseInt(workoutTimeEditText.getText().toString().trim()));
-        userData.put("workoutEnvironment", environmentSpinner.getSelectedItem().toString());
-        userData.put("focusArea", focusAreaSpinner.getSelectedItem().toString());
+        userData.put("workoutEnvironment", environmentSpinner.getText().toString());
+        userData.put("focusArea", focusAreaSpinner.getText().toString());
         userData.put("hasMedicalConditions", medicalConditionsCheckbox.isChecked());
         
         // Add days per week - critical for WorkoutPlanActivity
-        String daysPerWeekStr = daysPerWeekSpinner.getSelectedItem().toString();
+        String daysPerWeekStr = daysPerWeekSpinner.getText().toString();
         int daysPerWeek = Integer.parseInt(daysPerWeekStr.substring(0, 1)); // Extract the number (e.g., "3 days" → 3)
         userData.put("daysPerWeek", daysPerWeek);
         
-        // Calculate BMI
-        float heightInMeters = Float.parseFloat(heightEditText.getText().toString().trim()) / 100;
-        float weight = Float.parseFloat(weightEditText.getText().toString().trim());
-        float bmi = weight / (heightInMeters * heightInMeters);
-        userData.put("bmi", bmi);
-        
-        // Save to Firebase
-        String userId = currentUser.getUid();
-        mDatabase.child("users").child(userId).child("healthProfile").setValue(userData)
+        // Save data to Firebase
+        mDatabase.child("users").child(currentUser.getUid()).child("healthProfile")
+                .setValue(userData)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(HealthQuestionnaireActivity.this, 
                                     "Health profile saved successfully", Toast.LENGTH_SHORT).show();
-                            // Navigate directly to the workout plan activity
-                            Intent intent = new Intent(HealthQuestionnaireActivity.this, WorkoutPlanActivity.class);
-                            startActivity(intent);
+                            
+                            // Navigate to workout plan
+                            startActivity(new Intent(HealthQuestionnaireActivity.this, WorkoutPlanActivity.class));
                             finish();
                         } else {
-                            Toast.makeText(HealthQuestionnaireActivity.this, 
-                                    "Failed to save health profile", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(HealthQuestionnaireActivity.this,
+                                    "Failed to save health profile: " + task.getException().getMessage(),
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                 });
+    }
+    
+    private void setupBackButton() {
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (currentPage > 0) {
+                    // If not on the first page, go back to previous page
+                    currentPage--;
+                    updatePageVisibility();
+                    updateProgressIndicator();
+                } else {
+                    // If on the first page, handle like a back press
+                    onBackPressed();
+                }
+            }
+        });
     }
 } 

@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.4" />
 
     <!-- Already have an account text -->
     <TextView
@@ -28,6 +28,8 @@
         android:text="Already have an account?"
         android:textColor="#9E9E9E"
         android:textSize="16sp"
+        android:visibility="visible"
+        android:alpha="0"
         app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,18 +37,21 @@
         app:layout_constraintVertical_bias="0.95" />
 
     <!-- Sign in button -->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="64dp"
-        android:background="@drawable/rounded_button"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
         android:text="Sign in"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
+        android:visibility="visible"
+        android:alpha="0"
+        app:backgroundTint="#000000"
+        app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

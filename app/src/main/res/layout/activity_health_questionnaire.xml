@@ -4,65 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".HealthQuestionnaireActivity">
 
-    <TextView
-        android:id="@+id/titleTextView"
+    <!-- Back arrow button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+    
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Health Questionnaire"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginEnd="16dp"
+        app:indicatorColor="@color/blue"
+        app:trackColor="@color/grey_light"
+        app:indicatorSize="32dp"
+        app:trackThickness="3dp"
+        app:indicatorDirectionCircular="clockwise"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/pageIndicator"
+        android:id="@+id/progressCountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Page 1 of 9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:text="1/9"
+        app:layout_constraintBottom_toBottomOf="@+id/progressIndicator"
+        app:layout_constraintEnd_toEndOf="@+id/progressIndicator"
+        app:layout_constraintStart_toStartOf="@+id/progressIndicator"
+        app:layout_constraintTop_toTopOf="@+id/progressIndicator" />
 
     <!-- Page 1: Name Question -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/nameQuestionLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/nameQuestionTextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="What is your full name?"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="What should we call you?"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="72dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/nameEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:hint="Full Name"
-            android:inputType="textPersonName"
+            android:layout_marginTop="48dp"
+            android:hint="Your Name"
+            android:textColorHint="@color/grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxBackgroundColor="@color/grey_very_light"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/nameQuestionTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="textPersonName"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -71,48 +109,68 @@
         android:id="@+id/ageGenderQuestionLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/ageQuestionTextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="What is your age?"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="72dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/ageEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
+            android:layout_marginTop="48dp"
             android:hint="Age"
-            android:inputType="number"
+            android:textColorHint="@color/grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxBackgroundColor="@color/grey_very_light"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ageQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/ageQuestionTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="number"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/genderQuestionTextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="48dp"
             android:text="What is your gender?"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ageEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/ageInputLayout" />
 
         <RadioGroup
             android:id="@+id/genderRadioGroup"
@@ -127,19 +185,28 @@
                 android:id="@+id/maleRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Male" />
+                android:text="Male"
+                android:textSize="16sp"
+                android:paddingVertical="8dp"
+                android:buttonTint="@color/blue"/>
 
             <RadioButton
                 android:id="@+id/femaleRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Female" />
+                android:text="Female"
+                android:textSize="16sp"
+                android:paddingVertical="8dp"
+                android:buttonTint="@color/blue"/>
 
             <RadioButton
                 android:id="@+id/otherRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Other" />
+                android:text="Other"
+                android:textSize="16sp"
+                android:paddingVertical="8dp"
+                android:buttonTint="@color/blue"/>
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -149,60 +216,97 @@
         android:id="@+id/heightWeightQuestionLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/heightQuestionTextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="What is your height?"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="72dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/heightEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/heightInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:ems="10"
+            android:layout_marginTop="48dp"
             android:hint="Height (cm)"
-            android:inputType="numberDecimal"
+            android:textColorHint="@color/grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxBackgroundColor="@color/grey_very_light"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heightQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/heightQuestionTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/heightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="numberDecimal"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/weightQuestionTextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="48dp"
             android:text="What is your weight?"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/heightEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/heightInputLayout" />
 
-        <EditText
-            android:id="@+id/weightEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weightInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:ems="10"
             android:hint="Weight (kg)"
-            android:inputType="numberDecimal"
+            android:textColorHint="@color/grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxBackgroundColor="@color/grey_very_light"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weightQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/weightQuestionTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/weightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:inputType="numberDecimal"
+                android:background="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -219,7 +323,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/fitnessGoalsQuestionTextView"
@@ -227,18 +331,33 @@
             android:layout_height="wrap_content"
             android:text="What is your primary fitness goal?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/fitnessGoalsSpinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fitnessGoalsInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:hint="Select a goal"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fitnessGoalsQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/fitnessGoalsQuestionTextView">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/fitnessGoalsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -255,7 +374,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/fitnessLevelQuestionTextView"
@@ -263,18 +382,33 @@
             android:layout_height="wrap_content"
             android:text="What is your current fitness level?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/fitnessLevelSpinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fitnessLevelInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:hint="Select your level"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fitnessLevelQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/fitnessLevelQuestionTextView">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/fitnessLevelSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -291,7 +425,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/intensityQuestionTextView"
@@ -299,22 +433,37 @@
             android:layout_height="wrap_content"
             android:text="What workout intensity do you prefer?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/intensitySpinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/intensityInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:hint="Select intensity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/intensityQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/intensityQuestionTextView">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/intensitySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Page 7: Workout Time Question -->
+    <!-- Page 7: Workout Time and Days Per Week Question -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/workoutTimeQuestionLayout"
         android:layout_width="0dp"
@@ -327,7 +476,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/workoutTimeQuestionTextView"
@@ -335,21 +484,33 @@
             android:layout_height="wrap_content"
             android:text="How much time can you dedicate to working out each day?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/workoutTimeEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/workoutTimeInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:ems="10"
             android:hint="Time (minutes)"
-            android:inputType="number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/workoutTimeQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/workoutTimeQuestionTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/workoutTimeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/daysPerWeekQuestionTextView"
@@ -358,22 +519,37 @@
             android:layout_marginTop="32dp"
             android:text="How many days per week can you exercise?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/workoutTimeEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/workoutTimeInputLayout" />
 
-        <Spinner
-            android:id="@+id/daysPerWeekSpinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/daysPerWeekInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:hint="Select days per week"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/daysPerWeekQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/daysPerWeekQuestionTextView">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/daysPerWeekSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Page 8: Environment Question -->
+    <!-- Page 8: Environment and Focus Area Questions -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/environmentQuestionLayout"
         android:layout_width="0dp"
@@ -386,7 +562,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/environmentQuestionTextView"
@@ -394,18 +570,33 @@
             android:layout_height="wrap_content"
             android:text="What is your preferred workout environment?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/environmentSpinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/environmentInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:hint="Select environment"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/environmentQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/environmentQuestionTextView">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/environmentSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/focusAreaQuestionTextView"
@@ -414,18 +605,33 @@
             android:layout_marginTop="32dp"
             android:text="Which body area would you like to focus on?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/environmentSpinner" />
 
-        <Spinner
-            android:id="@+id/focusAreaSpinner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/focusAreaInputLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:hint="Select focus area"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/focusAreaQuestionTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/focusAreaQuestionTextView">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/focusAreaSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -442,7 +648,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pageIndicator">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/medicalConditionsQuestionTextView"
@@ -450,6 +656,7 @@
             android:layout_height="wrap_content"
             android:text="Do you have any medical conditions we should be aware of?"
             android:textSize="18sp"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -460,6 +667,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Yes, I have medical conditions that might affect my workout"
+            android:textColor="@color/text_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/medicalConditionsQuestionTextView" />
@@ -471,9 +679,9 @@
         android:id="@+id/navigationLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -483,6 +691,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Previous"
+            android:backgroundTint="@color/grey"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -490,18 +699,25 @@
 
         <Button
             android:id="@+id/nextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/grey_light"
+            app:cornerRadius="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
+            android:backgroundTint="@color/blue"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -1,11 +1,12 @@
 package com.example.flextrack_ianation;
 
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -50,7 +52,8 @@ public class SignInActivity extends AppCompatActivity {
     
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
-    private TextView appLogoText;
+    private TextView alreadyHaveAccountText;
+    private MaterialButton signInButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +69,23 @@ public class SignInActivity extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         mAuth = FirebaseAuth.getInstance();
 
-        appLogoText = findViewById(R.id.app_logo_text);
-        Button signInButton = findViewById(R.id.sign_in_button);
+        // Find views
+        alreadyHaveAccountText = findViewById(R.id.already_have_account_text);
+        signInButton = findViewById(R.id.sign_in_button);
         
-        // Animate FlexTrack logo
-        animateLogoText();
+        // Make views visible but fully transparent
+        alreadyHaveAccountText.setVisibility(View.VISIBLE);
+        signInButton.setVisibility(View.VISIBLE);
+        alreadyHaveAccountText.setAlpha(0f);
+        signInButton.setAlpha(0f);
+        
+        // Start fade-in animations with a slight delay
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                fadeInViews();
+            }
+        }, 1000);
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,20 +95,23 @@ public class SignInActivity extends AppCompatActivity {
         });
     }
     
-    private void animateLogoText() {
-        // Create a TranslateAnimation to move the text upward
-        TranslateAnimation animation = new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, 0f,
-                Animation.RELATIVE_TO_SELF, -0.1f);
+    private void fadeInViews() {
+        // Create a ValueAnimator for smooth fading from 0 to 1
+        ValueAnimator fadeAnimator = ValueAnimator.ofFloat(0f, 1f);
+        fadeAnimator.setDuration(1800); // 1.8 seconds for a slower animation
+        fadeAnimator.setInterpolator(new AccelerateDecelerateInterpolator()); // Smooth acceleration and deceleration
         
-        animation.setDuration(1000);  // Animation duration in milliseconds
-        animation.setFillAfter(true); // Keep the end position
-        animation.setStartOffset(500); // Delay before starting animation
+        fadeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                float alpha = (float) animation.getAnimatedValue();
+                // Apply the same alpha value to both views for synchronized fading
+                alreadyHaveAccountText.setAlpha(alpha);
+                signInButton.setAlpha(alpha);
+            }
+        });
         
-        // Start the animation
-        appLogoText.startAnimation(animation);
+        fadeAnimator.start();
     }
     
     @Override
