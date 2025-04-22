@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@android:drawable/ic_menu_directions"
+        android:title="Steps Counter"
+        android:tag="steps" />
+
+    <item
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Workout Plan"
+        android:tag="workout" />
+
+    <item
+        android:icon="@android:drawable/ic_menu_report_image"
+        android:title="Progress"
+        android:tag="progress" />
+</menu> 

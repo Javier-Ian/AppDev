@@ -19,5 +19,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FLEXTRACK_APPDEV"
 include(":app")
